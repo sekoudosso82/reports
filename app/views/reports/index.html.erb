@@ -1,0 +1,25 @@
+    <h2> All reports ......</h2>
+    
+    <%= link_to  "New Report", new_report_path, :method => :get %> <br>
+
+    <div>
+        <% @reports.each do |report| %>
+            <br>
+            <%= link_to  "More Details", report %> <br>
+            
+            <%= report.reporter %><br>
+
+             <%= report.gender %><br>
+
+            <%= report.location %><br>
+
+            <%= report.description %><br>
+
+            <%= report.start_date %><br>
+
+            <%= report.end_date %> <br>
+        <% end %>
+    </div>
+
+
+
