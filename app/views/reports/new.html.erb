@@ -17,8 +17,12 @@
         <%= f.label :reporter %>
         <%= f.text_field :reporter %><br>
 
+        <%= f.label :image, "reporter_photo" %>
+        <%= f.file_field :image %><br>
+
         <%= f.label :gender %>  
         <%= f.select(:gender, options_for_select([["Male", "Male"],["Female", "Female"], ["Other", "Other"]],@report.gender), {:include_blank => 'Select Gender'}, { :class => 'form-control' }) %> <br>
+        
         <%= f.label :location %>
         <%= f.text_field :location %> <br>
 

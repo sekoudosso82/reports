@@ -1,5 +1,5 @@
 class Report < ApplicationRecord
-  # enum gender: [:female, :male, :other]
+  has_one_attached :image 
   validates :start_date, :end_date, presence: true 
   validate :end_date_after_start_date
 
@@ -12,14 +12,6 @@ class Report < ApplicationRecord
       errors.add(:end_date, "must be after the start date")
     end
   end
-  # class << self
-  #   def gender()
-  #     gender = {
-  #       '1' => 'Male',
-  #       '2' => 'Female',
-  #       '3' => 'Other'
-  #     }
-  #   end
-  # end
+  
 
 end

@@ -1,17 +1,20 @@
 
-    <br>
-    <%= link_to  "main page", reports_path() %> <br>
-
-    <%= @report.reporter %><br>
-
-    <%= @report.gender %><br>
-
-    <%= @report.location %><br>
-
-    <%= @report.description %><br>
-
-    <%= @report.start_date %><br>
-
-    <%= @report.end_date %> <br>
+    <br> 
+    <h2> <%= link_to  "main page", reports_path() %> <br> </h2>
+    
+    <h2> Repoter name: <%= @report.reporter %><br> </h2>
+    
+    <h2> <%= image_tag(@report.image, class: "index-img") %> <br> </h2>
+    
+    <h2> Reporter gender: <%= @report.gender %><br> </h2>
+    
+    <h2> Report location: <%= @report.location %><br> </h2>
+    
+    <h2> Report description: <%= @report.description %><br>  </h2>
+    
+    <h2> Repoter start_date: <%= @report.start_date %><br> </h2>
+    
+    <h2> Repoter end_date: <%= @report.end_date %> <br> </h2>
+    
 
 
